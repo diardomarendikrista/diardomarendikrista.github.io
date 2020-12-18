@@ -141,6 +141,11 @@ p {
   text-align: center;
 }
 
+.hidden {
+  visibility: hidden;
+  font-size: 1px;
+}
+
 .green {
   color: #0a8523;
 }
