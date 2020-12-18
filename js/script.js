@@ -45,19 +45,19 @@ let pembayaran = 150000;
 if (kesulitan === "easy") {
   //status
   waktu = 60;
-  pelanggan = 5;
+  pelanggan = 3;
   //kesulitan soal
   pembelian = 10000;
   pembayaran = 50000;
 } else if (kesulitan === "normal") {
   waktu = 30;
-  pelanggan = 8;
+  pelanggan = 5;
   //kesulitan soal
   pembelian = 105000;
   pembayaran = 150000;
 } else if (kesulitan === "hard") {
   waktu = 15;
-  pelanggan = 15;
+  pelanggan = 10;
   //kesulitan soal
   pembelian = 1005500;
   pembayaran = 270000;
