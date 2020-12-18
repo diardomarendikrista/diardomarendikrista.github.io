@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img\icon.png" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>cashier</title>
+  </head>
+  <body>
+    <section id="navbar">
+      <div>
+        <p><a href="index.html">CASHIER</a></p>
+      </div>
+    </section>
+    <section id="main">
+      <div>
+        <h1>WELCOME</h1>
+      </div>
+      <div class="container">
+        <div>
+          <p>
+            Anda akan berperan sebagai kasir manual yang melayani para pembeli.
+          </p>
+          <p>
+            Pembeli akan membeli sejumlah barang dan membayar dengan sejumlah
+            uang.
+          </p>
+          <p>Anda diminta untuk memberikan kembalian yang sesuai.</p>
+          <p>
+            Anda harus cepat dan tepat dalam memberikan kembalian, karena masih
+            banyak pelanggan yang mengantri di belakang.
+          </p>
+          <p>
+            Anda diberikan nyawa / kesempatan, yang mana apabila waktu habis atau
+            salah memberikan kembalian, maka nyawa / kesempatan akan berkurang
+          </p>
+          <p>
+            Permainan dinyatakan selesai apabila nyawa / kesempatan anda habis,
+            atau anda sukses melayani semua pelanggan.
+          </p>
+          <p><br />Contoh soal :</p>
+          <p>
+            Andi membeli beberapa barang dengan total Rp. 10.000 <br />
+            Andi membayar dengan uang Rp. 50.000<br />
+            Jawaban Kembalian : Rp. 40.000
+          </p>
+          <p>
+            <br />*Untuk menjawab, anda dapat menekan gambar uang, atau juga ketik
+            manual dibawah gambar uang
+          </p>
+          <p>*Anda mungkin akan membutuhkan kalkulator untuk memberi kembalian.</p>
+        </div>
+        <div class="difficulty">
+          <h4>Tingkat kesulitan :</h4>
+          <form action="play.html" method="GET">
+              <input type="radio" name="difficulty" id="easy" value="easy" checked>
+              <label for="easy">Belajar Berhitung&nbsp;&nbsp;</label>
+              <input type="radio" name="difficulty" id="normal" value="normal">
+              <label for="normal">Normal&nbsp;&nbsp;</label>
+              <input type="radio" name="difficulty" id="hard" value="hard">
+              <label for="hard">Ga ada akhlak</label>
+              <input type="submit" class="start" value="Start >>">
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <audio id="soundCorrect" src="audio/kaching.mp3"></audio>
+    <footer>Cashier &copy2020 Diardo Marendi Krista</footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

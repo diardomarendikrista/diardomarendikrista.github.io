@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img\icon.png" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>cashier</title>
+  </head>
+  <body>
+    <section id="navbar">
+      <div>
+        <p><a href="index.html">CASHIER</a></p>
+      </div>
+    </section>
+    <section id="main">
+      <div id="timer">
+        <h1 id="cdtimer">Waktu anda <span id="countdowntimer"> </span> detik</h1>
+      </div>
+      <div class="container">
+        <div class="status">
+          <div>
+            <ul>
+              <li id="kesempatan">Kesempatan : <span id="nyawa"></span></li>
+              <li>Antrian pelanggan : <span id="pelanggan"></span></li>
+            </ul>
+          </div>
+          <div>
+            <p"><button id="giveUp" onclick="giveUp()">menyerah</a></p>
+          </div>
+        </div>
+        <hr />
+        <div class="soal">
+          <p id="soal">ini adalah soal</p>
+          <p class="rhs" id="rhs">rhs</p>
+          <p id="hasil"></p>
+        </div>
+        <hr />
+        <div class="jawaban">
+          <div class="uang">
+            <div>
+              <label for="seratusRibu" onclick="nambahUang('seratusRibu')"><img src="img/100000.jpg" alt="100000"></label>
+              <input type="number" id="seratusRibu" min="0" />
+            </div>
+            <div>
+              <label for="limapuluhRibu" onclick="nambahUang('limapuluhRibu')"><img src="img/50000.jpg" alt="50000"></label>
+              <input type="number" id="limapuluhRibu" min="0" />
+            </div>
+            <div>
+              <label for="duapuluhRibu" onclick="nambahUang('duapuluhRibu')"><img src="img/20000.jpg" alt="20000"></label>
+              <input type="number" id="duapuluhRibu" min="0" />
+            </div>
+            <div>
+              <label for="sepuluhRibu" onclick="nambahUang('sepuluhRibu')"><img src="img/10000.jpg" alt="10000"></label>
+              <input type="number" id="sepuluhRibu" min="0" />
+            </div>
+            <div>
+              <label for="limaRibu" onclick="nambahUang('limaRibu')"><img src="img/5000.jpg" alt="5000"></label>
+              <input type="number" id="limaRibu" min="0" />
+            </div>
+            <div>
+              <label for="duaRibu" onclick="nambahUang('duaRibu')"><img src="img/2000.jpg" alt="2000"></label>
+              <input type="number" id="duaRibu" min="0" />
+            </div>
+            <div>
+              <label for="seRibu" onclick="nambahUang('seRibu')"><img src="img/1000.jpg" alt="1000"></label>
+              <input type="number" id="seRibu" min="0" />
+            </div>
+            <div>
+              <label for="limaRatus" onclick="nambahUang('limaRatus')"><img src="img/500.jpg" alt="500"></label>
+              <input type="number" id="limaRatus" min="0" />
+            </div>
+            <div>
+              <label for="seRatus" onclick="nambahUang('seRatus')"><img src="img/100.jpg" alt="100"></label>
+              <input type="number" id="seRatus" min="0" />
+            </div>
+            <div>
+              <label for="limaPuluh" onclick="nambahUang('limaPuluh')"><img src="img/50.jpg" alt="50"></label>
+              <input type="number" id="limaPuluh" min="0" />
+            </div>
+            <div>
+              <label for="sePuluh" onclick="nambahUang('sePuluh')"><img src="img/10.jpg" alt="10"></label>
+              <input type="number" id="sePuluh" min="0" />
+            </div>
+            <div>
+              <label for="satu" onclick="nambahUang('satu')"><img src="img/1.jpg" alt="1"></label>
+              <input type="number" id="satu" min="0" />
+            </div>
+          </div>
+          <div id="return">
+            <label for="kembalian">Kembalian : </label>
+            <input type="number" id="kembalian" min="0" disabled />
+          </div>
+          <div class="execute">
+            <button class="transaksi" onclick="jawab()">Beri Kembalian</button>
+            <button class="transaksi" onclick="clearKembalian()">Clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <audio id="soundLvl" src="audio/lvlup.mp3"></audio>
+    <audio id="soundWrong" src="audio/wrong.mp3"></audio>
+    <audio id="soundCorrect" src="audio/kaching.mp3"></audio>
+    <audio id="soundCorrect2" src="audio/kaching.mp3"></audio>
+    <audio id="soundCorrect3" src="audio/kaching.mp3"></audio>
+    <audio id="soundCorrect4" src="audio/kaching.mp3"></audio>
+    <audio id="soundCorrect5" src="audio/kaching.mp3"></audio>
+    <audio id="soundTick" src="audio/tick.mp3"></audio>
+    <audio id="soundTick2" src="audio/tick.mp3"></audio>
+    <audio id="soundTick3" src="audio/tick.mp3"></audio>
+    <audio id="soundTick4" src="audio/tick.mp3"></audio>
+    <audio id="soundTick5" src="audio/tick.mp3"></audio>
+    <footer>Cashier &copy2020 Diardo Marendi Krista <button onclick="cit()" style="background-color: black; border: black;">ngecit</button></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+input[type="number"] {
+  width: 70px;
+}
+
+p {
+  padding: 2px;
+}
+
+/* ID */
+#giveUp {
+  display: block;
+  color: white;
+  background-color: #888888;
+  font-weight: bold;
+  margin: 0 10px 5px 0;
+  padding: 0 5px;
+}
+
+#giveUp:hover {
+  background-color: #b3b2b1;
+  color: red;
+}
+
+#hasil {
+  text-align: center;
+}
+
+#kembalian {
+  width: 15vw;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#navbar div {
+  padding: 0 3%;
+}
+
+#navbar a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#nyawa img {
+  vertical-align: middle;
+  width: 1.2vw;
+  padding-right: 2px;
+}
+
+#pelanggan img {
+  vertical-align: middle;
+  width: 0.8vw;
+  padding-right: 3px;
+}
+
+#main {
+  display: block;
+  margin: 1px auto;
+  width: 65%;
+  padding: 4%;
+}
+
+#main h1 {
+  text-align: center;
+  padding: 25px;
+}
+
+#return {
+  padding-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Class */
+
+.black {
+  color: black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  background-color: #eceaea;
+  border-radius: 1%;
+  opacity: 95%;
+  padding: 2%;
+  box-shadow: 0 0 40px 5px;
+}
+
+.difficulty {
+  text-align: center;
+  margin: 30px 0;
+  vertical-align: middle;
+}
+
+.difficulty h4 {
+  padding-bottom: 5px;
+}
+
+.execute {
+  text-align: center;
+}
+
+.green {
+  color: #0a8523;
+}
+
+.jawaban {
+  padding: 10px 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.red {
+  color: red;
+}
+
+.rhs {
+  visibility: hidden;
+  font-size: 1px;
+}
+
+.soal {
+  padding: 10px 0 40px 0;
+  height: 10vh;
+}
+
+.start {
+  display: block;
+  margin: 10px auto 20px auto;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: #4e504a;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Oxygen", sans-serif;
+}
+
+.start:hover {
+  background-color: #a7aba0;
+  color: black;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  color: green;
+  font-weight: bold;
+}
+
+.status ul,
+.status li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 10px;
+}
+
+.transaksi {
+  display: inline-block;
+  margin: 20px 10px 0 10px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: #4e504a;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Oxygen", sans-serif;
+}
+
+.transaksi:hover {
+  background-color: #a7aba0;
+  color: black;
+}
+
+.uang {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.uang div {
+  width: 110px;
+  margin: 5px 0;
+}
+
+.uang img {
+  width: 100px;
+  height: 45px;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  input[type="number"] {
+    width: 13vw;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  #giveUp {
+    display: block;
+    color: white;
+    background-color: #888888;
+    font-weight: bold;
+    margin: 10px 10px 0px 5px;
+    padding: 0 5px;
+  }
+
+  #kembalian {
+    width: 30vw;
+  }
+
+  #main {
+    display: block;
+    margin: 1px auto;
+    width: 80%;
+    padding: 10% 0px;
+  }
+
+  #pelanggan img {
+    vertical-align: middle;
+    width: 3vw;
+    padding-right: 4px;
+  }
+
+  #nyawa img {
+    vertical-align: middle;
+    width: 4vw;
+    padding-right: 2px;
+  }
+
+  .soal {
+    padding: 10px 0 40px 0;
+    height: 15vh;
+  }
+
+  .status {
+    padding-bottom: 10px;
+    display: block;
+    color: green;
+  }
+
+  .status ul,
+  .status li {
+    list-style-type: none;
+    display: list-item;
+    padding: 0 3px;
+  }
+
+  .transaksi {
+    margin: 15px 3px 0 3px;
+    padding: 7% 5%;
+    border-radius: 20px;
+    background-color: #4e504a;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: "Oxygen", sans-serif;
+  }
+
+  .uang {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .uang div {
+    width: 25vw;
+    margin: 1px 0;
+  }
+
+  .uang img {
+    width: 23vw;
+  }
+}
+/* END OF MOBILE */
