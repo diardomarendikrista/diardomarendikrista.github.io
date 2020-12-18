@@ -109,6 +109,11 @@ p {
   font-weight: bold;
 }
 
+#ruleSepuluh {
+  height: 20px;
+  vertical-align: middle;
+}
+
 /* Class */
 
 .black {
