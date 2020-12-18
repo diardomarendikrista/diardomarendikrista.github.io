@@ -261,6 +261,7 @@ p {
 
   p {
     text-align: justify;
+    font-size: 3.2vw;
   }
 
   #giveUp {
@@ -295,9 +296,13 @@ p {
     padding-right: 2px;
   }
 
+  .difficulty {
+    font-size: 3vw;
+  }
+
   .soal {
     padding: 10px 0 40px 0;
-    height: 15vh;
+    height: 10vh;
   }
 
   .status {
