@@ -1,6 +1,6 @@
 //initializing everythings.... (puyeng sendiri pak bacanya. wkwkkw)
 
-//////////////////////// tingkat kesulitan ngambil dari URL GET \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////// untuk menentukan tingkat kesulitan, ngambil dari URL GET \\\\\\\\\\\\\\\\\\\\\\\\\
 // Get Nav URL
 function getNavUrl() {
   // Get URL
@@ -29,7 +29,7 @@ function getParameters(url) {
 }
 //console.log(getParameters(getNavUrl()));
 
-//cek tingkat kesulitan
+//set tingkat kesulitan
 let kesulitan = getParameters(getNavUrl()).difficulty;
 //console.log(kesulitan);
 
@@ -65,25 +65,10 @@ if (kesulitan === "easy") {
 //////////////////////// end of set tingkat kesulitan \\\\\\\\\\\\\\\\\\\\\
 
 //initializing status
-let suratPeringatan = 0;
 let timeLeft = waktu;
+let suratPeringatan = 0;
 let soundTick = 0;
 let soundKaching = 0;
-
-const urlNyawa = `<img src="../img/lope.png">`;
-const urlPelanggan = `<img src="../img/man.png">`;
-let gambarNyawa = ``;
-let gambarAntrian = ``;
-for (let i = 0; i < nyawa; i++) {
-  gambarNyawa += urlNyawa;
-}
-for (let i = 0; i < pelanggan; i++) {
-  gambarAntrian += urlPelanggan;
-}
-
-document.getElementById("countdowntimer").innerHTML = timeLeft;
-document.getElementById("nyawa").innerHTML = gambarNyawa;
-document.getElementById("pelanggan").innerHTML = gambarAntrian;
 
 //panggil soal tiap refresh
 soal();
@@ -136,6 +121,7 @@ function soal() {
   return exchange;
 }
 
+//mengosongkan inputan kembalian
 function clearKembalian() {
   let elements = document.getElementsByTagName("input");
   for (let i = 0; i < elements.length; i++) {
@@ -145,7 +131,7 @@ function clearKembalian() {
   }
 }
 
-//klik gambar uang
+//ketika klik gambar uang
 function nambahUang(uang) {
   document.getElementById(uang).value++;
   playTick();
@@ -170,6 +156,12 @@ function playTick() {
     soundTick = 0;
   }
 }
+
+//tadinya mau pake ini , tapi kurang puas hasil suaranya XD
+// function playTick() {
+//   document.getElementById("soundTick5").currentTime = 0;
+//   document.getElementById("soundTick5").play();
+// }
 
 //efek suara betul, supaya kalau betul terus & ga ke-skip audionya.
 function playCorrect() {
@@ -215,9 +207,11 @@ let realTime = setInterval(function () {
 
   document.getElementById("kembalian").value = totalUang;
 
-  //data nyawa & antrian
-  gambarNyawa = ``;
-  gambarAntrian = ``;
+  //Set data nyawa & antrian
+  const urlNyawa = `<img src="../img/lope.png">`;
+  const urlPelanggan = `<img src="../img/man.png">`;
+  let gambarNyawa = ``;
+  let gambarAntrian = ``;
   for (let i = 0; i < nyawa; i++) {
     gambarNyawa += urlNyawa;
   }
@@ -254,8 +248,8 @@ let downloadTimer = setInterval(function () {
   }
   //nge - clear message
   if (timeLeft <= waktu - 3) {
-    document.getElementById("hasil").innerHTML = ``;
-    document.getElementById("hasil").setAttribute("class", "black");
+    document.getElementById("message").innerHTML = ``;
+    document.getElementById("message").setAttribute("class", "black");
   }
 }, 1000);
 
@@ -268,16 +262,17 @@ function jawab() {
   clearKembalian();
 
   if (!jawaban) {
-    document.getElementById("hasil").setAttribute("class", "red bold");
+    // kalau kotak jawaban kosong, maka :
+    document.getElementById("message").setAttribute("class", "red bold");
     document.getElementById(
-      "hasil"
+      "message"
     ).innerHTML = `Isi kembaliannya! (tekan uangnya)`;
   } else if (jawaban === exchange) {
-    // kalau jawaban benar, lakukan langkah ini
+    // kalau jawaban benar, maka :
     playCorrect();
-    document.getElementById("hasil").setAttribute("class", "green bold");
+    document.getElementById("message").setAttribute("class", "green bold");
     document.getElementById(
-      "hasil"
+      "message"
     ).innerHTML = `ANDA BENAR, pelanggan selanjutnya..`;
     pelanggan--;
     timeLeft = waktu;
@@ -286,19 +281,18 @@ function jawab() {
     }
     soal();
   } else {
-    // kalau jawaban salah, lakukan langkah ini
+    // kalau jawaban salah, maka :
     document.getElementById("soundWrong").play();
     let salah = "";
     nyawa--;
     suratPeringatan++;
     timeLeft = waktu;
+    // menentukan pesan di box
     if (jawaban > exchange) {
       salah = `KEMBALIAN TERLALU BANYAK!\nANDA MERUGIKAN PERUSAHAAN!\nanda mendapat Surat Peringatan ${suratPeringatan}`;
     } else if (jawaban < exchange) {
       salah = `KEMBALIAN KURANG!\nPENGUNJUNG KOMPLAIN BERAT!\nanda mendapat Surat Peringatan ${suratPeringatan}`;
     }
-
-    document.getElementById("hasil").innerHTML = ``;
     alert(salah);
     soal();
     if (nyawa <= 0) {
